@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+/* navbar section */
+
+.navbar {
+  background-color: rgb(43, 180, 43);
+  height: 70px;
+
+}
+
+.nav-item a:hover {
+  background-color: yellow;
+  color: black !important;
+  cursor: pointer;
+
+}
+
+/* main section */
+
+.container1 {
+  background-color: aliceblue;
+  height: 800px;
+}
+
+.heading {
+  width: 450px;
+  animation: typing 3s steps(20), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5px solid;
+  color: rgb(43, 180, 43);
+  text-align: center;
+}
+
+/* moving text animation */
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.heading h4 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+
+}
+
+/* paragraph about kerala */
+
+.para {
+  width: 80%;
+}
+
+#para1 {
+  margin-left: 220px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: justify;
+}
+
+#heading1 {
+  color: darkblue;
+  margin-top: 51px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 36px;
+}
+
+#heading2 {
+  color: darkblue;
+  margin-top: 51px;
+  text-align: center;
+  font-size: 36px;
+}
+
+/*Explore */
+.img-1:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.img-1 {
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* paragragh about kerala */
+#para3 {
+  color: black;
+  font-style: oblique;
+  font-weight: 500;
+  text-align: justify;
+  background-color:aliceblue;
+  line-height: 35px;
+
+}
+
+/* famous in kerala */
+#heading3 {
+  color: black;
+  margin-top: 51px;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  text-decoration: underline;
+
+}
+
+.img-2:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.img-2 {
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/* footer section */
+.d-flex {
+  background: #2a2e32;
+  margin-top: 70px;
+}
+
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #212529;
+}
+
+.list-unstyled li a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.list-unstyled li a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+/* districts page */
+
+#card1 {
+  margin-left: 256px;
+}
+
+
+.stacked {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.stacked:hover {
+  transform: scale(1.05);
+}
+
+
+.media {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.image-text {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+
+
+.image-text:hover {
+
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Each districts detials page */
+
+
+.ds{
+  background-color: yellow;
+  padding: 3px;
+  margin-top: 50px;
+
+}
+
+#para5{
+  margin-top: 30px;
+}
+
+#img-tvm{
+  background-size: cover;
+  width: 655px;
+  height: 416px;
+}
+
+#heading6{
+ 
+  text-align: center;
+  color: darkblue;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#heading7{
+  background-color: darkblue;
+  color: white;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+#ds-img1{
+  width: 745px;
+  height: 387px;
+}
+
+/* About us page */
+
+#about-head{
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+#about-para{
+  line-height: 30px;
+}
+
+.contact-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(43, 180, 43);
+    padding: 10px;
+    width: 450px;
+    height: 555px;
+    border-radius: 67px;
+
+   
+
+}
+
+
+.form-control1{
+  border-radius: 10px;
+  border-color: yellow;
+  width: 250px;
+}
+
+.textarea1{
+  border-radius: 10px;
+  text-align: center;
+  border-color: yellow;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-github {
+  background: #dadee0;
+  color: rgb(4, 4, 4);
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa{
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 18px;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.social a{
+  font-size: 36px;
+}
