@@ -5,19 +5,23 @@
 }
 
 /* navbar section */
-
-.navbar {
+.navbar-light{
   background-color: rgb(43, 180, 43);
-  height: 70px;
-
 }
 
-.nav-item a:hover {
+.nav-item a{
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  border: 1px solid yellow;
+  padding: 10px;
+  margin-right: 7px;
+  
+}
+
+.nav-item a:hover{
+  color: rgb(22, 21, 21) !important;
   background-color: yellow;
-  color: black !important;
-  cursor: pointer;
-
 }
+
 
 /* main section */
 
