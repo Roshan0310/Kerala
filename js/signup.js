@@ -19,11 +19,11 @@ function email_validate() {
     let emailFormat = /^([\w\.-]+)@([\w\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
     if (emailFormat.test(email.value)) {
         emailError.innerHTML = "<label><small>Valid Email</small></label>";
-        emailError.style.color = "#16C79A";
+        emailError.style.color = "green";
         return true;
     } else {
         emailError.innerHTML = "<label><small>Invalid Email</small></label>";
-        emailError.style.color = "#FF5151";
+        emailError.style.color = "red";
         return false;
     }
 }
@@ -35,11 +35,11 @@ function phone_validate() {
     let phoneFormat3 = /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
     if (phoneFormat0.test(phone.value) || phoneFormat1.test(phone.value) || phoneFormat2.test(phone.value) || phoneFormat3.test(phone.value)) {
         phoneError.innerHTML = "<label><small>Valid Phone Number</small></label>";
-        phoneError.style.color = "#16C79A";
+        phoneError.style.color = "green";
         return true;
     } else {
         phoneError.innerHTML = "<label><small>Invalid Phone Number</small></label>";
-        phoneError.style.color = "#FF5151";
+        phoneError.style.color = "red";
         return false;
     }
 
@@ -54,31 +54,31 @@ function password_validate() {
         if (lowerCaseLetters.test(password.value) && upperCaseLetters.test(password.value) && numbers.test(password.value)) {
             if (password.value.length == 8) {
                 passwordError.innerHTML = "<label><small>Password Strength: Poor</small></label>";
-                passwordError.style.color = "#FF5151"
-                password.style.border = "2px solid #FF5151";
+                passwordError.style.color = "red"
+                password.style.border = "2px solid red";
                 return false;
             } else if (password.value.length > 8 && password.value.length < 12) {
                 passwordError.innerHTML = "<label><small>Password Strength: Medium</small></label>";
-                passwordError.style.color = "#FFAB4C"
-                password.style.border = "2px solid #FFAB4C";
+                passwordError.style.color = "yellow"
+                password.style.border = "2px solid yellow";
                 return false;
             } else if (password.value.length > 12) {
                 passwordError.innerHTML = "<label><small>Password Strength: Strong</small></label>";
-                passwordError.style.color = "#16C79A"
-                password.style.border = "2px solid #16C79A";
+                passwordError.style.color = "green"
+                password.style.border = "2px solid green";
                 return true;
             }
         } else {
             passwordError.innerHTML = "<label><small>Password must contain at least 8 characters, one uppercase, one lowercase, one number.</small></label>";
-            passwordError.style.color = "#FF5151"
-            password.style.border = "2px solid #FF5151";
+            passwordError.style.color = "#red"
+            password.style.border = "2px solid #red";
             return false;
             return false;
         }
     } else {
         passwordError.innerHTML = "<label><small>Password Too Short.</small></label>";
-        passwordError.style.color = "#FF5151"
-        password.style.border = "2px solid #FF5151";
+        passwordError.style.color = "red"
+        password.style.border = "2px solid #red";
         return false;
     }
 
@@ -87,14 +87,14 @@ function password_validate() {
 function password_match_checker() {
     if (password.value === retypePassword.value) {
         retypePasswordError.innerHTML = "<label><small>Password match.</small></label>";
-        retypePasswordError.style.color = "#16C79A"
-        retypePassword.style.border = "2px solid #16C79A";
+        retypePasswordError.style.color = "green"
+        retypePassword.style.border = "2px solid green";
         return true;
     }
     else {
         retypePasswordError.innerHTML = "<label><small>Password didn't match.</small></label>";
-        retypePasswordError.style.color = "#FF5151"
-        retypePassword.style.border = "2px solid #FF5151";
+        retypePasswordError.style.color = "red"
+        retypePassword.style.border = "2px solid red";
         return false;
     }
 }
