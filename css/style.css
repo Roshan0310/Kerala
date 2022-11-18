@@ -259,6 +259,88 @@ a:hover {
   height: 387px;
 }
 
+/* Signup and Login */
+
+.signup{
+ 
+ 
+  width: 100%;
+}
+
+.form1{
+  display: flex;
+  flex-direction: row;
+  margin-left: 310px;
+    margin-top: 36px;
+    border: 1px solid green;
+    border-radius: 15px;
+
+
+}
+
+.formImage{
+  width: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.Right1{
+  width: 50%;
+  background-color: white;
+  
+}
+
+.img-fluid{
+  width: 300px;
+}
+
+.myInput{
+  border-radius: 10px;
+}
+
+.testt{
+  width: 250px;
+  height: 159px;
+}
+
+.form2{
+  width: 580px;
+  height: 368px;
+  border: 1px solid greenyellow;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  margin-left: 235px;
+}
+
+.btn1{
+  background-color: #fff666;
+  color: black;
+
+}
+
+.btn1 :hover{
+  background-color: greenyellow !important;
+  color: yellow;
+}
+
+.login1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 
+.formImage{
+  margin-left: 100px;
+} */
+
 /* About us page */
 
 #about-head{
@@ -340,3 +422,5 @@ a:hover {
 .social a{
   font-size: 36px;
 }
+
+
