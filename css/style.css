@@ -261,80 +261,57 @@ a:hover {
 
 /* Signup and Login */
 
-.signup{
+
+.formS{
+  background-image: url(/images/bg-1.jpg);
+  background-size: cover;
+   display: flex;
+  width: 100% ; 
+  align-items: center;
+  justify-content: center;
+
  
- 
-  width: 100%;
 }
 
-.form1{
-  display: flex;
-  flex-direction: row;
-  margin-left: 310px;
-    margin-top: 36px;
-    border: 1px solid green;
-    border-radius: 15px;
-
-
+.Myform{
+background-color: #fff000;
+height: 584px;
+width: 385px;
+padding: 34px;
+margin-top: 200px;
+margin-left: 422px;
+border-radius: 15px;
+text-align: center;
 }
 
-.formImage{
-  width: 50%;
-  background-color: white;
-  justify-content: center;
-  align-items: center;
+
+.FormClass{
+height: 800px;
+}
+.FormElements{
+width: 100%;
+color: green;
+border-radius: 5px;
+border: 1px solid greenyellow;
+height: 35px;
 }
 
-.Right1{
-  width: 50%;
-  background-color: white;
-  
+#formHead{
+padding-bottom: 20px;
+text-decoration: underline;
 }
 
-.img-fluid{
-  width: 300px;
+#FormBtn{
+width: 80px;
+height: 40px;
+background-color: green;
+color: #fff000;
+border-radius: 5px;
 }
 
-.myInput{
-  border-radius: 10px;
+#formLog{
+text-decoration: none;
 }
-
-.testt{
-  width: 250px;
-  height: 159px;
-}
-
-.form2{
-  width: 580px;
-  height: 368px;
-  border: 1px solid greenyellow;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login{
-  margin-left: 235px;
-}
-
-.btn1{
-  background-color: #fff666;
-  color: black;
-
-}
-
-.btn1 :hover{
-  background-color: greenyellow !important;
-  color: yellow;
-}
-
-.login1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 /* 
 .formImage{

@@ -3,54 +3,56 @@ var emailError = document.getElementById("emailError");
 var password = document.getElementById("password");
 var passwordError = document.getElementById("passworError");
 
-function validate(){
-    if(emailValidate()){
-        if(passwordValidate()){
-            return true;
-        }else{
-            return false;
-        }
-    }else{
-        return false;
-    }
-}
-
 
 function emailValidate() {
     let emailFormat = /^([\w\.-]+)@([\w\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
     if (emailFormat.test(email.value)) {
-        emailError.innerHTML = "<label><small>Valid Email</small></label>";
-        emailError.style.color = "#16C79A";
+        emailError.innerHTML = "<label>Email valid</label>";
+        emailError.style.color = "green";
         return true;
     } else {
-        emailError.innerHTML = "<label><small>Invalid Email</small></label>";
-        emailError.style.color = "#FF5151";
+        emailError.innerHTML = "<label>Enter a valid email</label>";
+        emailError.style.color = "red";
         return false;
     }
 }
 
-function passwordValidate() {
+function passwordvalidate() {
     let lowerCaseLetters = /[a-z]/g;
     let upperCaseLetters = /[A-Z]/g;
     let numbers = /[0-9]/g;
 
     if (password.value.length >= 8) {
         if (lowerCaseLetters.test(password.value) && upperCaseLetters.test(password.value) && numbers.test(password.value)) {
-            passwordError.innerHTML = "<label><small>Success</small></label>";
+            passwordError.innerHTML = "<label><small>correct Password </small></label>";
             passwordError.style.color = "green"
-            password.style.border = "2px solid red";
+            password.style.border = "1px solid green";
             return true;
         } else {
-            passwordError.innerHTML = "<label><small>Password incorrect.</small></label>";
+            passwordError.innerHTML = "<label>Incorrect password</label>";
             passwordError.style.color = "red"
-            password.style.border = "2px solid red";
+            password.style.border = "1px solid red";
             return false;        
         }
     } else {
-        passwordError.innerHTML = "<label><small>Password Invalid</small></label>";
+        passwordError.innerHTML = "<label>Invalid password</label>";
         passwordError.style.color = "red"
-        password.style.border = "2px solid red";
+        password.style.border = "1px solid red";
         return false;
     }
 
+}
+
+function validate(){
+    if(emailValidate()){
+        if(passwordvalidate()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
 }

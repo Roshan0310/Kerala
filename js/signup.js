@@ -1,5 +1,3 @@
-// let firstName = document.getElementById("firstname");
-// let lastName = document.getElementById("lastname");
 let email = document.getElementById("email");
 let emailError = document.getElementById("emailError");
 let phone = document.getElementById("phone");
@@ -7,45 +5,44 @@ let phoneError = document.getElementById("phoneError");
 let password = document.getElementById("password");
 let passwordError = document.getElementById("passworError");
 let retypePassword = document.getElementById("retypePassword");
-
-var retypePasswordError = document.getElementById("retypePasswordError");
-
+let retypePasswordError = document.getElementById("retypePasswordError");
 
 
 
 
 
-function email_validate() {
+
+function emailValidate() {
     let emailFormat = /^([\w\.-]+)@([\w\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
     if (emailFormat.test(email.value)) {
-        emailError.innerHTML = "<label><small>Valid Email</small></label>";
+        emailError.innerHTML = "<small>Valid Email</small>";
         emailError.style.color = "green";
         return true;
     } else {
-        emailError.innerHTML = "<label><small>Invalid Email</small></label>";
+        emailError.innerHTML = "<label>Please enter a valid email</label>";
         emailError.style.color = "red";
         return false;
     }
 }
 
-function phone_validate() {
-    let phoneFormat0 = /^[0-9]{10}$/;
-    let phoneFormat1 = /^([0-9]{3})-([0-9]{3})-([0-9]{4})$/;
-    let phoneFormat2 = /^([0-9]{3}).([0-9]{3}).([0-9]{4})$/;
-    let phoneFormat3 = /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
-    if (phoneFormat0.test(phone.value) || phoneFormat1.test(phone.value) || phoneFormat2.test(phone.value) || phoneFormat3.test(phone.value)) {
-        phoneError.innerHTML = "<label><small>Valid Phone Number</small></label>";
+function phoneValidate() {
+    let condition1 = /^[0-9]{10}$/;
+    let condition2 = /^([0-9]{3})-([0-9]{3})-([0-9]{4})$/;
+    let condition3 = /^([0-9]{3}).([0-9]{3}).([0-9]{4})$/;
+    let condition4 = /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
+    if (condition1.test(phone.value) || condition2.test(phone.value) || condition3.test(phone.value) || condition4.test(phone.value)) {
+        phoneError.innerHTML = "<label>Valid Phone Number</label>";
         phoneError.style.color = "green";
         return true;
     } else {
-        phoneError.innerHTML = "<label><small>Invalid Phone Number</small></label>";
+        phoneError.innerHTML = "<label>Please enter a valid Phone Number</label>";
         phoneError.style.color = "red";
         return false;
     }
 
 }
 
-function password_validate() {
+function passwordValidate() {
     let lowerCaseLetters = /[a-z]/g;
     let upperCaseLetters = /[A-Z]/g;
     let numbers = /[0-9]/g;
@@ -53,68 +50,65 @@ function password_validate() {
     if (password.value.length >= 8) {
         if (lowerCaseLetters.test(password.value) && upperCaseLetters.test(password.value) && numbers.test(password.value)) {
             if (password.value.length == 8) {
-                passwordError.innerHTML = "<label><small>Password Strength: Poor</small></label>";
+                passwordError.innerHTML = "<small>Password Strength: Poor</label>";
+                password.style.border = "1px solid red";
                 passwordError.style.color = "red"
-                password.style.border = "2px solid red";
+        
                 return false;
             } else if (password.value.length > 8 && password.value.length < 12) {
-                passwordError.innerHTML = "<label><small>Password Strength: Medium</small></label>";
-                passwordError.style.color = "yellow"
-                password.style.border = "2px solid yellow";
+                passwordError.innerHTML = "<label>Password Strength: Medium</label>";
+                password.style.border = "1px solid blue";
+                passwordError.style.color = "blue";
+               
                 return false;
             } else if (password.value.length > 12) {
-                passwordError.innerHTML = "<label><small>Password Strength: Strong</small></label>";
-                passwordError.style.color = "green"
-                password.style.border = "2px solid green";
+                passwordError.innerHTML = "<label>Password Strength: Strong</label>";
+                password.style.border = "1px solid green";
+                passwordError.style.color = "green";
+               
                 return true;
             }
         } else {
-            passwordError.innerHTML = "<label><small>Password must contain at least 8 characters, one uppercase, one lowercase, one number.</small></label>";
+            passwordError.innerHTML = "<label>Password must contain Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number</label>";
+            password.style.border = "1px solid #red";
             passwordError.style.color = "#red"
-            password.style.border = "2px solid #red";
             return false;
-            return false;
+           
         }
     } else {
-        passwordError.innerHTML = "<label><small>Password Too Short.</small></label>";
+        passwordError.innerHTML = "<label>Password is too short</label>";
+        password.style.border = "1px solid #red";
         passwordError.style.color = "red"
-        password.style.border = "2px solid #red";
-        return false;
+         return false;
     }
+
 
 }
 
-function password_match_checker() {
+function passwordMatch() {
     if (password.value === retypePassword.value) {
-        retypePasswordError.innerHTML = "<label><small>Password match.</small></label>";
+        retypePasswordError.innerHTML = "<label>Password matched</label>";
         retypePasswordError.style.color = "green"
-        retypePassword.style.border = "2px solid green";
+        retypePassword.style.border = "1px solid green";
         return true;
     }
     else {
-        retypePasswordError.innerHTML = "<label><small>Password didn't match.</small></label>";
+        retypePasswordError.innerHTML = "<label>Password didn't match</label>";
         retypePasswordError.style.color = "red"
-        retypePassword.style.border = "2px solid red";
+        retypePassword.style.border = "1px solid red";
         return false;
     }
 }
 
-function validate() {
-    if (email_validate()) {
 
-        if (phone_validate()) {
-
-            if (password_validate()) {
-
-                if (password_validate()) {
-
-                    if (password_match_checker()) {
-                        return true;
-                    }
-                    else {
-                        return false;
-                    }
-                } else {
+function validate(){
+    if(emailValidate()){
+        if(phoneValidate()){
+            if(passwordValidate()){
+                if(passwordMatch()){
+                    return true;
+                }
+                else{
                     return false;
                 }
             }
@@ -122,11 +116,11 @@ function validate() {
                 return false;
             }
         }
-        else {
+        else{
             return false;
         }
     }
-    else {
+    else{
         return false;
     }
 }
